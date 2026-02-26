@@ -152,26 +152,27 @@
             <div class="container">
                 <h2 class="section-title">Be Among the First to Experience SwiftDrive</h2>
                 <p>Join our early access list to receive launch updates, partner opportunities, and expansion announcements.</p>
-
-                <form id="earlyForm" class="early-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <select id="userType" name="userType" required>
-                            <option value="" disabled selected>I am a:</option>
-                            <option value="customer">Customer looking for a vehicle</option>
-                            <option value="provider">Vehicle Provider / Partner</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--block">Join Early Access</button>
-                </form>
+                <form action="https://formspree.io/f/xyz123" method="POST" class="early-form">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+        <select name="userType" required>
+            <option value="" disabled selected>I am a:</option>
+            <option value="customer">Customer looking for a vehicle</option>
+            <option value="provider">Vehicle Provider / Partner</option>
+        </select>
+    </div>
+    <!-- Optional: redirect back to a thank-you page -->
+    <input type="hidden" name="_next" value="https://swift-drive-mobility.vercel.app/thanks.html">
+    <button type="submit" class="btn btn--primary btn--block">Join Early Access</button>
+</form>
                 <p class="form-message" id="formMessage"></p>
             </div>
         </section>
@@ -302,3 +303,4 @@
 
 
 </html>
+
